@@ -1,0 +1,48 @@
+name: Trigger auto deployment for fastapi
+
+# When this action will be executed
+on:
+  # Automatically trigger it when detected changes in repo
+  push:
+    branches: 
+      [ main ]
+    paths:
+    - '**'
+    - '.github/workflows/fastapi-AutoDeployTrigger-6dd74aaa-4a57-4636-b1a7-1b62e0cdcaf8.yml'
+
+  # Allow manual trigger 
+  workflow_dispatch:      
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions: 
+      id-token: write #This is required for requesting the OIDC JWT Token
+      contents: read #Required when GH token is used to authenticate with private repo
+
+    steps:
+      - name: Checkout to the branch
+        uses: actions/checkout@v2
+
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          client-id: ${{ secrets.FASTAPI_AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.FASTAPI_AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.FASTAPI_AZURE_SUBSCRIPTION_ID }}
+
+      - name: Build and push container image to registry
+        uses: azure/container-apps-deploy-action@v2
+        with:
+          appSourcePath: ${{ github.workspace }}/FastApi
+          _dockerfilePathKey_: _dockerfilePath_
+          registryUrl: littercontainers.azurecr.io
+          registryUsername: ${{ secrets.FASTAPI_REGISTRY_USERNAME }}
+          registryPassword: ${{ secrets.FASTAPI_REGISTRY_PASSWORD }}
+          containerAppName: fastapi
+          resourceGroup: MonitoringLitterDetection
+          imageToBuild: littercontainers.azurecr.io/fastapi:${{ github.sha }}
+          _buildArgumentsKey_: |
+            _buildArgumentsValues_
+
+
