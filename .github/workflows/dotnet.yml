@@ -1,0 +1,41 @@
+name: .NET Build and Test
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+
+    - name: Restore dependencies for Main App
+      # Specify the path to your main application's .csproj file
+      run: dotnet restore ./MonitoringApi/MonitoringApi.csproj # <--- ADJUST THIS PATH
+
+    - name: Restore dependencies for Unit Tests
+      run: dotnet restore ./MonitoringApi.UnitTests/MonitoringApi.UnitTests.csproj # <--- ADJUST THIS PATH
+
+    - name: Restore dependencies for Integration Tests
+      run: dotnet restore ./MonitoringApi.IntegrationTests/MonitoringApi.IntegrationTests.csproj # <--- ADJUST THIS PATH
+
+    - name: Build Main App
+      # Build your main application project
+      run: dotnet build ./MonitoringApi/MonitoringApi.csproj --no-restore # <--- ADJUST THIS PATH
+
+    - name: Run Unit Tests
+      # Specify the path to your unit test project
+      run: dotnet test ./MonitoringApi.UnitTests/MonitoringApi.UnitTests.csproj --no-build --verbosity normal # <--- ADJUST THIS PATH
+
+    - name: Run Integration Tests
+      # Specify the path to your integration test project
+      run: dotnet test ./MonitoringApi.IntegrationTests/MonitoringApi.IntegrationTests.csproj --no-build --verbosity normal # <--- ADJUST THIS PATH
