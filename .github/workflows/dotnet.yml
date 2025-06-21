@@ -19,23 +19,19 @@ jobs:
         dotnet-version: 8.0.x
 
     - name: Restore dependencies for Main App
-      # Specify the path to your main application's .csproj file
-      run: dotnet restore ./MonitoringApi/MonitoringApi.csproj # <--- ADJUST THIS PATH
+      run: dotnet restore ./MonitoringApi/MonitoringApi.csproj
 
     - name: Restore dependencies for Unit Tests
-      run: dotnet restore ./MonitoringApi.UnitTests/MonitoringApi.UnitTests.csproj # <--- ADJUST THIS PATH
+      run: dotnet restore ./MonitoringApi.UnitTests/MonitoringApi.UnitTests.csproj
 
     - name: Restore dependencies for Integration Tests
-      run: dotnet restore ./MonitoringApi.IntegrationTests/MonitoringApi.IntegrationTests.csproj # <--- ADJUST THIS PATH
+      run: dotnet restore ./MonitoringApi.IntegrationTests/MonitoringApi.IntegrationTests.csproj
 
     - name: Build Main App
-      # Build your main application project
-      run: dotnet build ./MonitoringApi/MonitoringApi.csproj --no-restore # <--- ADJUST THIS PATH
+      run: dotnet build ./MonitoringApi/MonitoringApi.csproj --no-restore
 
     - name: Run Unit Tests
-      # Specify the path to your unit test project
-      run: dotnet test ./MonitoringApi.UnitTests/MonitoringApi.UnitTests.csproj --no-build --verbosity normal # <--- ADJUST THIS PATH
+      run: dotnet test ./MonitoringApi.UnitTests/MonitoringApi.UnitTests.csproj --verbosity normal
 
     - name: Run Integration Tests
-      # Specify the path to your integration test project
-      run: dotnet test ./MonitoringApi.IntegrationTests/MonitoringApi.IntegrationTests.csproj --no-build --verbosity normal # <--- ADJUST THIS PATH
+      run: dotnet test ./MonitoringApi.IntegrationTests/MonitoringApi.IntegrationTests.csproj --verbosity normal
