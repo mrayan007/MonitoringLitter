@@ -107,7 +107,8 @@ public partial class Program
                             "http://localhost:5500", // Common for VS Code Live Server (alternative)
                             "http://localhost:3000", // Example for React/Vue/Angular dev servers
                             "http://127.0.0.1:3000", // Your confirmed frontend URL
-                            "http://127.0.0.1:8000"  // FastAPI's own URL, for dev purposes if needed
+                            "http://127.0.0.1:8000",
+                            "https://mrayan007.github.io"// FastAPI's own URL, for dev purposes if needed
                         )
                         .AllowAnyHeader()   // Allow all headers
                         .AllowAnyMethod();  // Allow all HTTP methods (GET, POST, etc.)
