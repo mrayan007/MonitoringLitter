@@ -40,16 +40,27 @@ html, body {
 }
 
 main {
-    background-color: #F6A6BB;
+    background-color: #008080;
     height: calc(100% - 50px - 4px - 4px); /* 58px = footer height + border-weight*2 */
-    display: grid;
+    /* display: flex; */
+}
+
+#desktopApps {
+    padding: 20px;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+    /* align-content: flex-start; */
+    /* max-height: 100%; */
 }
 
 .desktopApp {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     gap: 10px;
 }
 

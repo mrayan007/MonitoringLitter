@@ -1,4 +1,3 @@
-# FastAPIMonitoring/main.py
 from fastapi import FastAPI, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
 from typing import Dict, List, Any
