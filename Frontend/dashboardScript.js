@@ -12,8 +12,8 @@ const CSHARP_API_BASE_URL = 'https://monitoringapi.yellowtree-67f8ca27.northeuro
 // Initialize the map once the DOM is ready, or directly here if 'map' div exists on load
 document.addEventListener('DOMContentLoaded', () => {
     map = L.map('map', {
-        center: [51.585719, 4.793235], // Center around Roosendaal, Netherlands
-        zoom: 13,
+        center: [51.5891072, 4.7753679], // Center around Roosendaal, Netherlands
+        zoom: 15,
         zoomControl: false // Keep zoom controls off if desired
     });
 
