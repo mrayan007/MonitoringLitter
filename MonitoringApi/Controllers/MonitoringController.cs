@@ -136,7 +136,7 @@ namespace MonitoringApi.Controllers
             }
             finally
             {
-                sensoringApiClient.DefaultRequestHeaders.Authorization = null; 
+                sensoringApiClient.DefaultRequestHeaders.Authorization = null;
             }
 
             foreach (var sensoringDto in sensoringDataList)
@@ -186,7 +186,7 @@ namespace MonitoringApi.Controllers
             return Ok($"Successfully fetched and saved {newLitterCount} new sensoring items to the Litter table. Logout process completed.");
         }
 
-        [HttpPost("predict/location")] 
+        [HttpPost("predict/location")]
         [Authorize]
         public async Task<IActionResult> PredictLocation([FromBody] PredictionRequest request)
         {
@@ -252,7 +252,7 @@ namespace MonitoringApi.Controllers
             }
         }
 
-        [HttpPost("predict/temperature")] 
+        [HttpPost("predict/temperature")]
         [Authorize]
         public async Task<IActionResult> PredictTemperature([FromBody] PredictionRequest request)
         {
@@ -294,6 +294,13 @@ namespace MonitoringApi.Controllers
                 Console.Error.WriteLine($"ERROR: Unexpected error during temperature prediction: {ex.Message}");
                 return StatusCode(500, $"Internal server error during temperature prediction: {ex.Message}");
             }
+        }
+        
+        [HttpGet("GetLitterFromDB")]
+        public async Task<ActionResult<IEnumerable<Litter>>> GetProducts()
+        {
+            var litter = await _context.Litter.ToListAsync();
+            return Ok(litter);
         }
     }
 }
