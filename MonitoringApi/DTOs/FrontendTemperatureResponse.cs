@@ -3,7 +3,7 @@
     public class FrontendTemperatureResponse
     {
         public double Prediction { get; set; }
-        public string Unit { get; set; } // e.g., "degrees Celsius"
+        public string Unit { get; set; }
     }
 
 }

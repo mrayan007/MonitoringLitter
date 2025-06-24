@@ -1,40 +1,33 @@
-// --- Global variables for JWT and Map ---
 let jwtToken = null;
-let tokenExpiry = null; // To keep track of token expiration
+let tokenExpiry = null; 
 
-let map = null; // Initialize map as null
-let marker = null; // To store the map marker, so we can update it later
+let map = null; 
+let marker = null;
 
-// Your C# API base URL (replace with your actual C# API address)
-const CSHARP_API_BASE_URL = 'https://monitoringapi.yellowtree-67f8ca27.northeurope.azurecontainerapps.io'; // Confirmed C# API URL
+const CSHARP_API_BASE_URL = 'https://monitoringapi.yellowtree-67f8ca27.northeurope.azurecontainerapps.io'; 
 
-// --- Leaflet Map Initialization ---
-// Initialize the map once the DOM is ready, or directly here if 'map' div exists on load
 document.addEventListener('DOMContentLoaded', () => {
     map = L.map('map', {
-        center: [51.5891072, 4.7753679], // Center around Roosendaal, Netherlands
+        center: [51.5891072, 4.7753679],
         zoom: 15,
-        zoomControl: false // Keep zoom controls off if desired
+        zoomControl: false 
     });
 
     L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
         attribution: '&copy; OpenStreetMap, Carto'
     }).addTo(map);
 
-    // --- Trigger initial login when the page loads ---
     login().catch(err => console.error("Initial login on page load failed:", err.message));
 });
 
 
-// --- Login Function ---
 async function login() {
-    // These credentials must match what your C# AuthController expects (e.g., in LoginRequestDto)
     const username = "admin";
     const password = "password123";
 
     try {
         console.log("Attempting to log in...");
-        const response = await fetch(`${CSHARP_API_BASE_URL}/api/Auth/login`, { // Adjust URL if needed
+        const response = await fetch(`${CSHARP_API_BASE_URL}/api/Auth/login`, { 
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -49,22 +42,20 @@ async function login() {
 
         const data = await response.json();
         jwtToken = data.accessToken;
-        tokenExpiry = new Date(data.expiresAt); // Parse the expiry date string into a Date object
+        tokenExpiry = new Date(data.expiresAt);
 
         console.log("Login successful! Token acquired. Expires at:", tokenExpiry);
 
     } catch (error) {
         console.error('Login error:', error);
-        // Alert the user only for critical login failures, especially on initial load
         alert(`Authentication required: ${error.message}\nPlease ensure the C# API is running and credentials are correct.`);
-        jwtToken = null; // Ensure token is cleared on failure
-        tokenExpiry = null; // Clear expiry as well
-        throw error; // Re-throw to prevent further operations that depend on authentication
+        jwtToken = null;
+        tokenExpiry = null;
+        throw error; 
     }
 }
 
 
-// --- Prediction Function ---
 async function predict() {
     const category = document.getElementById('category').value;
     const dayOfWeek = document.getElementById('day').value;
@@ -73,30 +64,25 @@ async function predict() {
 
     predictionResultLabel.textContent = "Loading prediction...";
 
-    // --- Authentication Check (Crucial for protected endpoints) ---
-    // If no token, or if token exists but is expired, attempt to log in again.
     if (!jwtToken || (tokenExpiry && new Date() >= tokenExpiry)) {
         console.log("No valid JWT found or token expired. Attempting to re-login...");
         try {
-            await login(); // Attempt to re-authenticate
+            await login(); 
         } catch (authError) {
-            // If re-login fails, display error and stop the prediction process
             predictionResultLabel.textContent = `Error: Authentication failed. ${authError.message}`;
-            return; // Exit the function
+            return;
         }
     }
 
     try {
-        // --- THIS IS THE CRUCIAL CHANGE: Adding Authorization header ---
         const headers = {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${jwtToken}` // Include the JWT here
+            'Authorization': `Bearer ${jwtToken}` 
         };
 
-        // Construct the URL dynamically based on predictionType
         const response = await fetch(`${CSHARP_API_BASE_URL}/api/Monitoring/predict/${predictionType}`, {
             method: 'POST',
-            headers: headers, // Use the headers object with JWT
+            headers: headers, 
             body: JSON.stringify({
                 category: category,
                 day_of_week: dayOfWeek
@@ -104,42 +90,37 @@ async function predict() {
         });
 
         if (!response.ok) {
-            const errorData = await response.json(); // Still try to parse for detailed error
-            // Specific handling for 401 Unauthorized, in case the token became invalid after login()
+            const errorData = await response.json(); 
             if (response.status === 401) {
                 alert("Your session has expired or is invalid. Please refresh the page to re-authenticate.");
-                jwtToken = null; // Clear invalid token
-                tokenExpiry = null; // Clear expiry
+                jwtToken = null; 
+                tokenExpiry = null; 
             }
             throw new Error(`C# API Error: ${response.status} - ${errorData.detail || JSON.stringify(errorData)}`);
         }
 
         const data = await response.json();
-        console.log("Prediction data from C# API:", data); // For debugging
+        console.log("Prediction data from C# API:", data); 
 
         if (predictionType === 'location') {
-            // For location prediction, the C# API will return an object with latitude, longitude, and address
-            const { latitude, longitude, address } = data; // Destructure the response
+            const { latitude, longitude, address } = data; 
             predictionResultLabel.textContent = `Predicted Location: ${address} (Lat: ${latitude.toFixed(4)}, Lon: ${longitude.toFixed(4)})`;
 
-            // Update map
             if (marker) {
-                map.removeLayer(marker); // Remove existing marker
+                map.removeLayer(marker);
             }
             marker = L.marker([latitude, longitude]).addTo(map)
                 .bindPopup(`Predicted location for ${category} on ${dayOfWeek}:<br>${address}`)
                 .openPopup();
-            map.setView([latitude, longitude], 15); // Zoom to the new location
+            map.setView([latitude, longitude], 15); 
 
         } else if (predictionType === 'temperature') {
-            // For temperature prediction, the C# API will return an object with 'prediction' and 'unit'
             const { prediction, unit } = data;
             predictionResultLabel.textContent = `Predicted Temperature: ${prediction.toFixed(2)} ${unit}`;
 
-            // Remove marker if previous prediction was location
             if (marker) {
                 map.removeLayer(marker);
-                marker = null; // Clear marker reference
+                marker = null; 
             }
         }
 

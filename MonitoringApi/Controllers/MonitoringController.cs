@@ -1,31 +1,29 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MonitoringApi.Data;
 using MonitoringApi.Models;
-using MonitoringApi.DTOs; // Ensure all your DTOs are here (PredictionRequest, FrontendLocationResponse, etc.)
+using MonitoringApi.DTOs;
 using System.Net.Http;
-using System.Net.Http.Json; // For PostAsJsonAsync and ReadFromJsonAsync
+using System.Net.Http.Json; 
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
-using System.Text.Json; // Needed for JsonSerializer.Deserialize<JsonElement>
+using System.Text.Json;
 using System.Globalization;
-using Microsoft.AspNetCore.Authorization; // ADD THIS USING DIRECTIVE FOR [Authorize]
+using Microsoft.AspNetCore.Authorization; 
 
 namespace MonitoringApi.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")] // Your endpoints will now start with /api/Monitoring/
-    // [Authorize] // REMOVED: Do NOT apply [Authorize] at the class level if you want some methods public
+    [Route("api/[controller]")]
     public class MonitoringController : ControllerBase
     {
         private readonly MonitoringContext _context;
         private readonly IHttpClientFactory _httpClientFactory;
         private readonly IConfiguration _configuration;
 
-        // Sensoring API configuration (remains the same)
         private readonly string _sensoringApiLoginPath;
         private readonly string _sensoringApiDataPath;
         private readonly string _sensoringApiLogoutPath;
@@ -33,7 +31,6 @@ namespace MonitoringApi.Controllers
         private readonly string _sensoringApiPassword;
         private readonly string _sensoringApiBaseUrl;
 
-        // FASTAPI and LocationIQ API configuration (NEW)
         private readonly string _fastApiBaseUrl;
         private readonly string _locationIqBaseUrl;
         private readonly string _locationIqApiKey;
@@ -45,7 +42,6 @@ namespace MonitoringApi.Controllers
             _httpClientFactory = httpClientFactory;
             _configuration = configuration;
 
-            // Sensoring API configuration (from your existing code)
             _sensoringApiBaseUrl = configuration.GetValue<string>("SensoringApi:BaseUrl")
                                    ?? throw new InvalidOperationException("Sensoring API BaseUrl is not configured in appsettings.json or user secrets.");
             _sensoringApiLoginPath = configuration.GetValue<string>("SensoringApi:LoginPath")
@@ -59,7 +55,6 @@ namespace MonitoringApi.Controllers
             _sensoringApiPassword = configuration.GetValue<string>("SensoringApi:Password")
                                    ?? throw new InvalidOperationException("Sensoring API Password is not configured in appsettings.json or user secrets.");
 
-            // FastAPI and LocationIQ API configuration (NEWLY ADDED)
             _fastApiBaseUrl = configuration.GetValue<string>("FastApiBaseUrl")
                               ?? throw new InvalidOperationException("FastApiBaseUrl is not configured in appsettings.json or user secrets.");
             _locationIqBaseUrl = configuration.GetValue<string>("LocationIq:BaseUrl")
@@ -68,19 +63,14 @@ namespace MonitoringApi.Controllers
                                 ?? throw new InvalidOperationException("LocationIq:ApiKey is not configured in appsettings.json or user secrets.");
         }
 
-        // POST: api/Monitoring/FetchAndStoreSensoringData
-        // This endpoint remains public (no [Authorize] here)
         [HttpPost("FetchAndStoreSensoringData")]
         public async Task<IActionResult> FetchAndStoreSensoringData()
         {
-            // Use the named client configured in Program.cs
             var sensoringApiClient = _httpClientFactory.CreateClient("SensoringApiClient");
-            // No need to set BaseAddress here again, it's done by AddHttpClient
 
             string authToken = null;
             int newLitterCount = 0;
 
-            // Step 1: Login and Get Token
             try
             {
                 var loginRequest = new LoginRequestDto
@@ -114,7 +104,6 @@ namespace MonitoringApi.Controllers
                 return StatusCode(500, $"Unexpected error during Sensoring API login: {ex.Message}");
             }
 
-            // Step 2: Fetch Data with Token
             List<SensoringLitterDto> sensoringDataList = new List<SensoringLitterDto>();
             try
             {
@@ -147,10 +136,9 @@ namespace MonitoringApi.Controllers
             }
             finally
             {
-                sensoringApiClient.DefaultRequestHeaders.Authorization = null; // Clear the Authorization header
+                sensoringApiClient.DefaultRequestHeaders.Authorization = null; 
             }
 
-            // Step 3: Save Data to Litter table
             foreach (var sensoringDto in sensoringDataList)
             {
                 if (await _context.Litter.AnyAsync(l => l.Id == sensoringDto.Id))
@@ -176,7 +164,6 @@ namespace MonitoringApi.Controllers
             }
             Console.WriteLine($"DEBUG: {newLitterCount} new sensoring items saved to Litter table.");
 
-            // Step 4: Logout
             if (!string.IsNullOrEmpty(authToken))
             {
                 try
@@ -199,18 +186,14 @@ namespace MonitoringApi.Controllers
             return Ok($"Successfully fetched and saved {newLitterCount} new sensoring items to the Litter table. Logout process completed.");
         }
 
-        // Endpoint to predict location
-        [HttpPost("predict/location")] // Calls FastAPI's /predict/location
-        [Authorize] // ADDED: This endpoint now requires a valid JWT
+        [HttpPost("predict/location")] 
+        [Authorize]
         public async Task<IActionResult> PredictLocation([FromBody] PredictionRequest request)
         {
-            // Use the named client configured in Program.cs
             var fastApiClient = _httpClientFactory.CreateClient("FastApiClient");
-            // No need to set BaseAddress here again.
 
             try
             {
-                // 1. Call FastAPI's /predict/location endpoint
                 var fastApiRequestContent = new StringContent(
                     JsonSerializer.Serialize(request),
                     System.Text.Encoding.UTF8,
@@ -235,10 +218,7 @@ namespace MonitoringApi.Controllers
                     return StatusCode(500, new { detail = "FastAPI returned null location prediction." });
                 }
 
-                // 2. Call LocationIQ for reverse geocoding
-                // Use the named client configured in Program.cs
                 var locationIqClient = _httpClientFactory.CreateClient("LocationIqApiClient");
-                // The URL here is relative to the BaseAddress set in Program.cs for "LocationIqApiClient"
                 var locationIqUrl = $"reverse.php?key={_locationIqApiKey}&lat={fastApiLocation.Latitude.ToString(CultureInfo.InvariantCulture)}&lon={fastApiLocation.Longitude.ToString(CultureInfo.InvariantCulture)}&format=json";
 
                 Console.WriteLine($"DEBUG: Calling LocationIQ: {locationIqClient.BaseAddress}{locationIqUrl}");
@@ -253,7 +233,6 @@ namespace MonitoringApi.Controllers
 
                 var locationIqData = await locationIqResponse.Content.ReadFromJsonAsync<LocationIqReverseGeocodeResponseDto>();
 
-                // 3. Return combined data to frontend
                 return Ok(new FrontendLocationResponse
                 {
                     Latitude = fastApiLocation.Latitude,
@@ -273,18 +252,14 @@ namespace MonitoringApi.Controllers
             }
         }
 
-        // Endpoint to predict temperature
-        [HttpPost("predict/temperature")] // Calls FastAPI's /predict/temperature
-        [Authorize] // ADDED: This endpoint now requires a valid JWT
+        [HttpPost("predict/temperature")] 
+        [Authorize]
         public async Task<IActionResult> PredictTemperature([FromBody] PredictionRequest request)
         {
-            // Use the named client configured in Program.cs
             var fastApiClient = _httpClientFactory.CreateClient("FastApiClient");
-            // No need to set BaseAddress here again.
 
             try
             {
-                // 1. Call FastAPI's /predict/temperature endpoint
                 var fastApiRequestContent = new StringContent(
                     JsonSerializer.Serialize(request),
                     System.Text.Encoding.UTF8,

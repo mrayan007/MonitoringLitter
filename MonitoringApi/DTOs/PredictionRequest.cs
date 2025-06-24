@@ -4,7 +4,7 @@ namespace MonitoringApi.DTOs
 {
     public class PredictionRequest
     {
-        [JsonPropertyName("category")] // Add this if FastAPI expects "category"
+        [JsonPropertyName("category")]
         public string Category { get; set; }
 
         [JsonPropertyName("day_of_week")]

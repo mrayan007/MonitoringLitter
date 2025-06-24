@@ -11,13 +11,13 @@ namespace MonitoringApi.DTOs
         [JsonPropertyName("dateTime")]
         public DateTime DateTime { get; set; }
 
-        [JsonPropertyName("locationLat")] // Kan "lat" of "locationLat" zijn
+        [JsonPropertyName("locationLat")] 
         public float LocationLat { get; set; }
 
-        [JsonPropertyName("locationLon")] // Kan "lon" of "locationLon" zijn
+        [JsonPropertyName("locationLon")] 
         public float LocationLon { get; set; }
 
-        [JsonPropertyName("category")] // Kan "category" of "wasteType" zijn
+        [JsonPropertyName("category")]
         public string Category { get; set; }
 
         [JsonPropertyName("confidence")]
