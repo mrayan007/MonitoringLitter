@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'windowsFont';
+    src: url("Fonts/W95FA.otf");
+}
+
+html, body{
+    font-family: 'windowsFont';
+    margin: 0;
+    display: flex;
+    width: 100dvw;
+    overflow-x: hidden;
+}
+
+#tableContainer {
+    background-color: #c3c3c3;  
+    border-spacing: 0;
+    border: solid 3px white;
+    border-style: outset;
+    outline: solid 3.5px #818181;
+    outline-style: outset;
+    padding: 15px;
+    max-width: calc(47.5% - 4px);
+    height: fit-content;
+    margin-top: 3.5px;
+    margin-left: 3.5px;
+}
+
+table {
+    text-align: center;
+    border-collapse: collapse;
+    outline: solid 3.5px black ; 
+}
+
+thead {
+    letter-spacing: 1px;
+    color: white;
+    background-image: linear-gradient(to right, #000080 , #1084d0);
+}
+
+tbody {
+    background-color: white;
+}
+
+#map {
+    height: 100%;
+    width: calc(100% / 2 - 5px);
+    cursor: url("Art/litterPicker.png"), crosshair;
+    position: fixed;
+    right: 0;
+}
+
+.leaflet-control-attribution {
+  display: none !important;
+}

@@ -1,0 +1,929 @@
+[
+    {
+        "id": "b3fc0425-e88a-4e66-9e93-0024c02ea25a",
+        "dateTime": "2025-06-19T12:43:24",
+        "locationLat": 51.588833,
+        "locationLon": 4.776539,
+        "category": "metaal",
+        "confidence": 0.62571615,
+        "temperature": 24.09
+    },
+    {
+        "id": "d4722461-8f33-4a45-abee-0170026dc6c3",
+        "dateTime": "2025-06-24T14:37:33",
+        "locationLat": 51.59058,
+        "locationLon": 4.7860155,
+        "category": "papier-karton",
+        "confidence": 0.89506173,
+        "temperature": 18.42
+    },
+    {
+        "id": "2a19ce9a-84ad-498d-8105-01c83ed8b4da",
+        "dateTime": "2025-06-24T14:31:07",
+        "locationLat": 51.58741,
+        "locationLon": 4.79385,
+        "category": "papier-karton",
+        "confidence": 0.6350023,
+        "temperature": 18.42
+    },
+    {
+        "id": "d4422043-efa0-4235-8d94-04ea75e274bf",
+        "dateTime": "2025-06-19T12:47:59",
+        "locationLat": 51.5865,
+        "locationLon": 4.7779765,
+        "category": "glas",
+        "confidence": 0.72157896,
+        "temperature": 24.28
+    },
+    {
+        "id": "ed4d2d20-88aa-4d10-a2c2-075efff0fc0d",
+        "dateTime": "2025-06-19T12:53:20",
+        "locationLat": 51.585167,
+        "locationLon": 4.7848754,
+        "category": "papier-karton",
+        "confidence": 0.7199481,
+        "temperature": 24.28
+    },
+    {
+        "id": "4e39e7de-c0b8-4255-aaf0-08031217734a",
+        "dateTime": "2025-06-24T14:35:53",
+        "locationLat": 51.585354,
+        "locationLon": 4.7751236,
+        "category": "papier-karton",
+        "confidence": 0.7517045,
+        "temperature": 18.24
+    },
+    {
+        "id": "05103dfa-0752-485c-929a-0dc2b649d4fc",
+        "dateTime": "2025-06-19T12:44:56",
+        "locationLat": 51.593468,
+        "locationLon": 4.795421,
+        "category": "papier-karton",
+        "confidence": 0.7936077,
+        "temperature": 24.06
+    },
+    {
+        "id": "de21452a-14cf-4ed6-9c46-0f7de22083bd",
+        "dateTime": "2025-06-19T12:46:43",
+        "locationLat": 51.582363,
+        "locationLon": 4.774117,
+        "category": "metaal",
+        "confidence": 0.7984401,
+        "temperature": 24.33
+    },
+    {
+        "id": "314af05e-d5bf-4381-b98a-167f6e8b67a5",
+        "dateTime": "2025-06-19T12:45:41",
+        "locationLat": 51.592354,
+        "locationLon": 4.77956,
+        "category": "metaal",
+        "confidence": 0.8107194,
+        "temperature": 24.28
+    },
+    {
+        "id": "fffec3d2-aa1a-4eed-8e42-1786f3e62809",
+        "dateTime": "2025-06-24T14:37:45",
+        "locationLat": 51.58251,
+        "locationLon": 4.7849097,
+        "category": "papier-karton",
+        "confidence": 0.7157232,
+        "temperature": 18.29
+    },
+    {
+        "id": "bbfce549-9f1e-44f7-a26d-18b5dd7c978c",
+        "dateTime": "2025-06-24T14:29:25",
+        "locationLat": 51.591137,
+        "locationLon": 4.7727885,
+        "category": "metaal",
+        "confidence": 0.64229214,
+        "temperature": 18.3
+    },
+    {
+        "id": "771a5b6d-d84e-4ee7-9988-1997d35fb4be",
+        "dateTime": "2025-06-19T12:43:56",
+        "locationLat": 51.591793,
+        "locationLon": 4.7908635,
+        "category": "metaal",
+        "confidence": 0.80041647,
+        "temperature": 24.08
+    },
+    {
+        "id": "df9fe0c2-63f8-4c88-8a95-1a39847974db",
+        "dateTime": "2025-06-19T12:43:35",
+        "locationLat": 51.5889,
+        "locationLon": 4.7737775,
+        "category": "metaal",
+        "confidence": 0.606485,
+        "temperature": 24.14
+    },
+    {
+        "id": "8cb38ea4-29be-4008-a2be-2a95341ac77a",
+        "dateTime": "2025-06-19T12:44:29",
+        "locationLat": 51.591167,
+        "locationLon": 4.7873044,
+        "category": "papier-karton",
+        "confidence": 0.6646567,
+        "temperature": 24.1
+    },
+    {
+        "id": "34e723e8-60c0-4562-8a1a-2d0d609f0032",
+        "dateTime": "2025-06-19T12:48:21",
+        "locationLat": 51.58964,
+        "locationLon": 4.7728553,
+        "category": "metaal",
+        "confidence": 0.63276535,
+        "temperature": 24.29
+    },
+    {
+        "id": "8659eb43-1633-4f28-9fcc-3150ca467ec8",
+        "dateTime": "2025-06-24T14:34:28",
+        "locationLat": 51.59239,
+        "locationLon": 4.7832155,
+        "category": "metaal",
+        "confidence": 0.6058784,
+        "temperature": 18.33
+    },
+    {
+        "id": "6c07e994-6ebb-4b6a-8449-330df326954c",
+        "dateTime": "2025-06-19T12:48:33",
+        "locationLat": 51.590385,
+        "locationLon": 4.7953906,
+        "category": "metaal",
+        "confidence": 0.7587058,
+        "temperature": 24.2
+    },
+    {
+        "id": "579a8755-95cc-4eb7-b969-33bd1a0cc480",
+        "dateTime": "2025-06-24T14:35:42",
+        "locationLat": 51.58715,
+        "locationLon": 4.7931347,
+        "category": "metaal",
+        "confidence": 0.8924206,
+        "temperature": 18.04
+    },
+    {
+        "id": "0e2c69de-2ece-4475-8d48-35fc93a884b4",
+        "dateTime": "2025-06-24T14:30:04",
+        "locationLat": 51.585358,
+        "locationLon": 4.7897773,
+        "category": "papier-karton",
+        "confidence": 0.734776,
+        "temperature": 18.42
+    },
+    {
+        "id": "bab8641b-0a3e-481a-aeee-366a00f684db",
+        "dateTime": "2025-06-19T12:45:27",
+        "locationLat": 51.58293,
+        "locationLon": 4.795685,
+        "category": "metaal",
+        "confidence": 0.6846622,
+        "temperature": 24.06
+    },
+    {
+        "id": "f19aa614-fa45-4f7d-9e60-36d664a26b78",
+        "dateTime": "2025-06-24T14:39:26",
+        "locationLat": 51.58797,
+        "locationLon": 4.7740345,
+        "category": "metaal",
+        "confidence": 0.7729481,
+        "temperature": 17.97
+    },
+    {
+        "id": "f11d1360-0908-4b06-90b1-3783e72a16dc",
+        "dateTime": "2025-06-24T14:40:41",
+        "locationLat": 51.590324,
+        "locationLon": 4.798462,
+        "category": "glas",
+        "confidence": 0.6569623,
+        "temperature": 17.99
+    },
+    {
+        "id": "31fc36af-6d0d-4ded-950d-3ba7bf2c4c56",
+        "dateTime": "2025-06-19T12:42:49",
+        "locationLat": 51.583668,
+        "locationLon": 4.7727113,
+        "category": "papier-karton",
+        "confidence": 0.69787794,
+        "temperature": 24.13
+    },
+    {
+        "id": "ac4c7a94-e7c2-4983-957e-3cfa4354c2b7",
+        "dateTime": "2025-06-24T14:42:43",
+        "locationLat": 51.58316,
+        "locationLon": 4.7716365,
+        "category": "papier-karton",
+        "confidence": 0.7311277,
+        "temperature": 18.03
+    },
+    {
+        "id": "6c43a5b0-e916-4715-bead-424fb54ee4bf",
+        "dateTime": "2025-06-24T14:40:51",
+        "locationLat": 51.582752,
+        "locationLon": 4.7825217,
+        "category": "papier-karton",
+        "confidence": 0.78132117,
+        "temperature": 17.99
+    },
+    {
+        "id": "71fdc94a-168b-4791-873a-44f19e182da0",
+        "dateTime": "2025-06-24T14:30:57",
+        "locationLat": 51.58631,
+        "locationLon": 4.784239,
+        "category": "metaal",
+        "confidence": 0.61290985,
+        "temperature": 18.33
+    },
+    {
+        "id": "75f0c017-18ee-4a71-b805-45b219983fd9",
+        "dateTime": "2025-06-19T12:48:43",
+        "locationLat": 51.590584,
+        "locationLon": 4.781511,
+        "category": "glas",
+        "confidence": 0.6480393,
+        "temperature": 24.26
+    },
+    {
+        "id": "22270847-9176-4ff3-866c-4696d1e37484",
+        "dateTime": "2025-06-19T12:46:21",
+        "locationLat": 51.590466,
+        "locationLon": 4.7877803,
+        "category": "papier-karton",
+        "confidence": 0.73737997,
+        "temperature": 24.1
+    },
+    {
+        "id": "204cb1a3-d0ab-4113-85fd-46c04f84b2fa",
+        "dateTime": "2025-06-19T12:48:10",
+        "locationLat": 51.58629,
+        "locationLon": 4.7925286,
+        "category": "metaal",
+        "confidence": 0.62878436,
+        "temperature": 24.1
+    },
+    {
+        "id": "fb57f91a-76dc-4792-b4cc-486d8acf6739",
+        "dateTime": "2025-06-24T14:29:53",
+        "locationLat": 51.59006,
+        "locationLon": 4.793575,
+        "category": "papier-karton",
+        "confidence": 0.84650284,
+        "temperature": 18.42
+    },
+    {
+        "id": "17aabcec-7733-479d-a5c6-4afe3dbea4b4",
+        "dateTime": "2025-06-24T14:43:50",
+        "locationLat": 51.586845,
+        "locationLon": 4.7888494,
+        "category": "papier-karton",
+        "confidence": 0.8626107,
+        "temperature": 18.03
+    },
+    {
+        "id": "acdde61e-021f-4624-9a86-4c8a4d450866",
+        "dateTime": "2025-06-19T12:44:40",
+        "locationLat": 51.59139,
+        "locationLon": 4.773789,
+        "category": "glas",
+        "confidence": 0.68493116,
+        "temperature": 23.8
+    },
+    {
+        "id": "2123fb96-7b63-4c93-a041-4e1a86f06678",
+        "dateTime": "2025-06-19T12:50:22",
+        "locationLat": 51.581722,
+        "locationLon": 4.7881207,
+        "category": "organisch",
+        "confidence": 0.8498902,
+        "temperature": 24.18
+    },
+    {
+        "id": "137ce58e-cd68-4438-879d-4f5002b8959f",
+        "dateTime": "2025-06-24T14:40:30",
+        "locationLat": 51.584724,
+        "locationLon": 4.7892704,
+        "category": "metaal",
+        "confidence": 0.72997636,
+        "temperature": 18
+    },
+    {
+        "id": "63f93358-4a7c-43a8-a2f3-555fbbb90e5b",
+        "dateTime": "2025-06-24T14:39:06",
+        "locationLat": 51.585434,
+        "locationLon": 4.7780085,
+        "category": "papier-karton",
+        "confidence": 0.68773776,
+        "temperature": 17.98
+    },
+    {
+        "id": "ea38695b-be2a-4488-b08b-566afcbe3cd5",
+        "dateTime": "2025-06-24T14:41:02",
+        "locationLat": 51.586956,
+        "locationLon": 4.774038,
+        "category": "glas",
+        "confidence": 0.65441895,
+        "temperature": 17.95
+    },
+    {
+        "id": "96febe38-cf91-44e7-ba1b-5894d5e311ca",
+        "dateTime": "2025-06-24T14:43:29",
+        "locationLat": 51.590992,
+        "locationLon": 4.794388,
+        "category": "papier-karton",
+        "confidence": 0.6899149,
+        "temperature": 18.03
+    },
+    {
+        "id": "023a9bbe-15b9-469a-a6ac-5f755274f3bf",
+        "dateTime": "2025-06-19T12:51:44",
+        "locationLat": 51.584103,
+        "locationLon": 4.7963243,
+        "category": "metaal",
+        "confidence": 0.9326708,
+        "temperature": 24.16
+    },
+    {
+        "id": "0d5a42af-cce4-4bb8-9759-647b273a2a10",
+        "dateTime": "2025-06-24T14:44:13",
+        "locationLat": 51.585148,
+        "locationLon": 4.771671,
+        "category": "glas",
+        "confidence": 0.83454514,
+        "temperature": 18
+    },
+    {
+        "id": "f53bc7b5-1d3b-4ea4-bbcf-6533c6ee17d6",
+        "dateTime": "2025-06-24T14:40:06",
+        "locationLat": 51.592793,
+        "locationLon": 4.794896,
+        "category": "metaal",
+        "confidence": 0.66041446,
+        "temperature": 17.97
+    },
+    {
+        "id": "88671618-627d-4827-a2eb-69489463d1ed",
+        "dateTime": "2025-06-24T14:33:41",
+        "locationLat": 51.5875,
+        "locationLon": 4.7784843,
+        "category": "metaal",
+        "confidence": 0.712166,
+        "temperature": 18.33
+    },
+    {
+        "id": "869a60e7-b49a-47d9-9743-6a667c005181",
+        "dateTime": "2025-06-24T14:39:16",
+        "locationLat": 51.59193,
+        "locationLon": 4.7977376,
+        "category": "papier-karton",
+        "confidence": 0.849645,
+        "temperature": 17.98
+    },
+    {
+        "id": "c53b0f11-f07b-4aa4-9e05-6c7693f79467",
+        "dateTime": "2025-06-24T14:32:55",
+        "locationLat": 51.59141,
+        "locationLon": 4.7757025,
+        "category": "organisch",
+        "confidence": 0.7953907,
+        "temperature": 18.24
+    },
+    {
+        "id": "c3d09515-599b-4bc6-8225-737fe142cf15",
+        "dateTime": "2025-06-24T14:38:08",
+        "locationLat": 51.587585,
+        "locationLon": 4.7710915,
+        "category": "metaal",
+        "confidence": 0.66704404,
+        "temperature": 17.97
+    },
+    {
+        "id": "207fc64c-39e0-4e6d-bb88-75b86647e710",
+        "dateTime": "2025-06-24T14:37:13",
+        "locationLat": 51.58226,
+        "locationLon": 4.7878513,
+        "category": "papier-karton",
+        "confidence": 0.889237,
+        "temperature": 18
+    },
+    {
+        "id": "7ddc55f3-6197-43ea-a011-79556961f51c",
+        "dateTime": "2025-06-24T14:33:20",
+        "locationLat": 51.590965,
+        "locationLon": 4.790208,
+        "category": "glas",
+        "confidence": 0.69389695,
+        "temperature": 18.04
+    },
+    {
+        "id": "b5519b94-0cd1-413c-92ba-7a9d13669012",
+        "dateTime": "2025-06-24T14:43:06",
+        "locationLat": 51.585823,
+        "locationLon": 4.7747827,
+        "category": "papier-karton",
+        "confidence": 0.6981741,
+        "temperature": 17.97
+    },
+    {
+        "id": "12de5fc8-130e-49f5-8ef5-7deb41fd829a",
+        "dateTime": "2025-06-24T14:32:00",
+        "locationLat": 51.591946,
+        "locationLon": 4.775411,
+        "category": "organisch",
+        "confidence": 0.61516106,
+        "temperature": 18.24
+    },
+    {
+        "id": "dc9df3ce-e24b-49c4-9f1b-81b584f5ecaa",
+        "dateTime": "2025-06-24T14:30:16",
+        "locationLat": 51.58615,
+        "locationLon": 4.775486,
+        "category": "papier-karton",
+        "confidence": 0.7736135,
+        "temperature": 18.33
+    },
+    {
+        "id": "099e4253-054f-4506-b13b-899c5941ab9e",
+        "dateTime": "2025-06-24T14:38:40",
+        "locationLat": 51.587597,
+        "locationLon": 4.77173,
+        "category": "papier-karton",
+        "confidence": 0.6072371,
+        "temperature": 17.97
+    },
+    {
+        "id": "3558813e-cb6b-436c-a07e-8d4d61ed9119",
+        "dateTime": "2025-06-24T14:41:46",
+        "locationLat": 51.584717,
+        "locationLon": 4.7738643,
+        "category": "papier-karton",
+        "confidence": 0.70669234,
+        "temperature": 18.02
+    },
+    {
+        "id": "16f9cfb0-48aa-4394-a87f-8dd4638339a9",
+        "dateTime": "2025-06-24T14:34:02",
+        "locationLat": 51.58456,
+        "locationLon": 4.780684,
+        "category": "metaal",
+        "confidence": 0.78159374,
+        "temperature": 18.31
+    },
+    {
+        "id": "6ab00b8e-f78c-4061-bfdb-8f15769bb051",
+        "dateTime": "2025-06-24T14:32:28",
+        "locationLat": 51.585747,
+        "locationLon": 4.781878,
+        "category": "papier-karton",
+        "confidence": 0.91027814,
+        "temperature": 18.24
+    },
+    {
+        "id": "7572069f-7f25-47ee-acc3-8fb62c9657b5",
+        "dateTime": "2025-06-24T14:31:50",
+        "locationLat": 51.592735,
+        "locationLon": 4.776832,
+        "category": "papier-karton",
+        "confidence": 0.65523297,
+        "temperature": 18.24
+    },
+    {
+        "id": "a009ea3c-9726-4612-842f-9017800f0218",
+        "dateTime": "2025-06-24T14:30:46",
+        "locationLat": 51.58236,
+        "locationLon": 4.782459,
+        "category": "metaal",
+        "confidence": 0.65224046,
+        "temperature": 18.31
+    },
+    {
+        "id": "da848293-4e53-4bc9-8410-92f279de956e",
+        "dateTime": "2025-06-24T14:39:48",
+        "locationLat": 51.585815,
+        "locationLon": 4.772991,
+        "category": "papier-karton",
+        "confidence": 0.6780902,
+        "temperature": 17.95
+    },
+    {
+        "id": "93fb3708-1348-4cf9-9266-936fb4872f5e",
+        "dateTime": "2025-06-19T12:45:16",
+        "locationLat": 51.58226,
+        "locationLon": 4.785818,
+        "category": "glas",
+        "confidence": 0.7262864,
+        "temperature": 24.09
+    },
+    {
+        "id": "b0ae4874-d9bd-4a9d-8099-9f5d8c82d584",
+        "dateTime": "2025-06-19T12:53:33",
+        "locationLat": 51.582253,
+        "locationLon": 4.7919803,
+        "category": "papier-karton",
+        "confidence": 0.66803175,
+        "temperature": 24.09
+    },
+    {
+        "id": "0f1777b3-d455-4bf8-8d8f-a021a78639b0",
+        "dateTime": "2025-06-24T14:38:30",
+        "locationLat": 51.59072,
+        "locationLon": 4.7975574,
+        "category": "metaal",
+        "confidence": 0.71933454,
+        "temperature": 17.98
+    },
+    {
+        "id": "3661ee54-5dca-45e6-aed1-a4508fe4dd83",
+        "dateTime": "2025-06-19T12:45:51",
+        "locationLat": 51.59127,
+        "locationLon": 4.7720885,
+        "category": "glas",
+        "confidence": 0.73238844,
+        "temperature": 23.8
+    },
+    {
+        "id": "c88d41d9-45e3-401f-bc49-aacadc72d3a7",
+        "dateTime": "2025-06-24T14:33:09",
+        "locationLat": 51.58438,
+        "locationLon": 4.7933416,
+        "category": "metaal",
+        "confidence": 0.7426219,
+        "temperature": 18.07
+    },
+    {
+        "id": "9a8efd8b-1f41-4d96-8cfe-ac8ae4f3931f",
+        "dateTime": "2025-06-24T14:31:34",
+        "locationLat": 51.584557,
+        "locationLon": 4.7723503,
+        "category": "organisch",
+        "confidence": 0.6440035,
+        "temperature": 18.27
+    },
+    {
+        "id": "434e930d-e9a8-4e58-9d6c-ae8d5f132e87",
+        "dateTime": "2025-06-19T12:43:00",
+        "locationLat": 51.584305,
+        "locationLon": 4.7761383,
+        "category": "papier-karton",
+        "confidence": 0.8754688,
+        "temperature": 24.12
+    },
+    {
+        "id": "95ee8875-0ee8-4555-9a67-b13b79cb7de8",
+        "dateTime": "2025-06-24T14:38:18",
+        "locationLat": 51.584602,
+        "locationLon": 4.780984,
+        "category": "metaal",
+        "confidence": 0.61389214,
+        "temperature": 17.98
+    },
+    {
+        "id": "f8d4e5cb-7536-406b-b4b4-b21c5fd6cc80",
+        "dateTime": "2025-06-19T12:43:10",
+        "locationLat": 51.59066,
+        "locationLon": 4.7774076,
+        "category": "glas",
+        "confidence": 0.72612876,
+        "temperature": 24.09
+    },
+    {
+        "id": "1d406261-08d0-4d84-ab10-b2bf5491b8f1",
+        "dateTime": "2025-06-19T12:42:20",
+        "locationLat": 51.588108,
+        "locationLon": 4.780413,
+        "category": "papier-karton",
+        "confidence": 0.64878374,
+        "temperature": 24.09
+    },
+    {
+        "id": "58bb5b98-2440-4a6c-b9eb-c1588967575b",
+        "dateTime": "2025-06-24T14:33:30",
+        "locationLat": 51.58233,
+        "locationLon": 4.797529,
+        "category": "papier-karton",
+        "confidence": 0.67316425,
+        "temperature": 18
+    },
+    {
+        "id": "bc173ebe-e104-4395-8214-c3fd4d52b970",
+        "dateTime": "2025-06-24T14:42:56",
+        "locationLat": 51.5876,
+        "locationLon": 4.7796097,
+        "category": "metaal",
+        "confidence": 0.73773,
+        "temperature": 17.98
+    },
+    {
+        "id": "8b9c6769-d8e4-4b6d-b30e-c66427a5ed8f",
+        "dateTime": "2025-06-24T14:44:00",
+        "locationLat": 51.591908,
+        "locationLon": 4.7709045,
+        "category": "papier-karton",
+        "confidence": 0.8603584,
+        "temperature": 18
+    },
+    {
+        "id": "57ac5f2a-a002-499d-864e-c8a74a6caf5d",
+        "dateTime": "2025-06-19T12:51:54",
+        "locationLat": 51.585808,
+        "locationLon": 4.7927785,
+        "category": "metaal",
+        "confidence": 0.86725724,
+        "temperature": 24.08
+    },
+    {
+        "id": "8db3e46c-828f-40a2-9556-ca104d294b13",
+        "dateTime": "2025-06-24T14:41:36",
+        "locationLat": 51.5857,
+        "locationLon": 4.7979693,
+        "category": "papier-karton",
+        "confidence": 0.6534735,
+        "temperature": 17.99
+    },
+    {
+        "id": "fe7120d6-3660-4481-884e-ca7a472ea587",
+        "dateTime": "2025-06-24T14:42:07",
+        "locationLat": 51.593395,
+        "locationLon": 4.7860637,
+        "category": "organisch",
+        "confidence": 0.6930156,
+        "temperature": 18.03
+    },
+    {
+        "id": "f72d3898-0136-4845-aba3-cba1cfae4956",
+        "dateTime": "2025-06-24T14:41:14",
+        "locationLat": 51.58222,
+        "locationLon": 4.790702,
+        "category": "glas",
+        "confidence": 0.9397535,
+        "temperature": 18
+    },
+    {
+        "id": "095ac897-65a0-446b-905e-cc7adb170eb1",
+        "dateTime": "2025-06-19T12:44:07",
+        "locationLat": 51.58455,
+        "locationLon": 4.7772136,
+        "category": "metaal",
+        "confidence": 0.66593707,
+        "temperature": 24.12
+    },
+    {
+        "id": "e2cf6523-3279-4c7c-bd18-cf2790c87d79",
+        "dateTime": "2025-06-19T12:50:09",
+        "locationLat": 51.584198,
+        "locationLon": 4.773695,
+        "category": "papier-karton",
+        "confidence": 0.62856317,
+        "temperature": 24.13
+    },
+    {
+        "id": "01351ced-3055-4043-b178-cf6cee003133",
+        "dateTime": "2025-06-19T12:43:46",
+        "locationLat": 51.588013,
+        "locationLon": 4.7980814,
+        "category": "metaal",
+        "confidence": 0.7541458,
+        "temperature": 24.06
+    },
+    {
+        "id": "e66a4c03-1a17-45a2-a2f3-cfd5c7be3946",
+        "dateTime": "2025-06-24T14:42:33",
+        "locationLat": 51.590324,
+        "locationLon": 4.7982397,
+        "category": "glas",
+        "confidence": 0.84930074,
+        "temperature": 17.98
+    },
+    {
+        "id": "cef08ec7-0ed1-4dfa-8388-d5cb574a4dc3",
+        "dateTime": "2025-06-19T12:42:37",
+        "locationLat": 51.593544,
+        "locationLon": 4.772314,
+        "category": "papier-karton",
+        "confidence": 0.66160464,
+        "temperature": 24.14
+    },
+    {
+        "id": "70c52df2-c8ab-4640-86b8-d6721bbd0e62",
+        "dateTime": "2025-06-24T14:34:13",
+        "locationLat": 51.591927,
+        "locationLon": 4.7711406,
+        "category": "metaal",
+        "confidence": 0.66108817,
+        "temperature": 18.3
+    },
+    {
+        "id": "e8213493-943b-4679-bb49-d795b6bfdf66",
+        "dateTime": "2025-06-19T12:45:06",
+        "locationLat": 51.583244,
+        "locationLon": 4.7863736,
+        "category": "metaal",
+        "confidence": 0.70018953,
+        "temperature": 24.09
+    },
+    {
+        "id": "02465a5f-f62b-410e-b07c-d8130b9e3727",
+        "dateTime": "2025-06-24T14:41:57",
+        "locationLat": 51.58748,
+        "locationLon": 4.7857924,
+        "category": "organisch",
+        "confidence": 0.70077455,
+        "temperature": 18.03
+    },
+    {
+        "id": "a2f20968-ef42-494c-83b1-dbb998e54cac",
+        "dateTime": "2025-06-24T14:30:26",
+        "locationLat": 51.585175,
+        "locationLon": 4.7915225,
+        "category": "papier-karton",
+        "confidence": 0.66115344,
+        "temperature": 18.42
+    },
+    {
+        "id": "ae59f781-b99d-4b01-addd-dbc17a53ccd0",
+        "dateTime": "2025-06-24T14:30:36",
+        "locationLat": 51.590656,
+        "locationLon": 4.7912035,
+        "category": "papier-karton",
+        "confidence": 0.69737595,
+        "temperature": 18.42
+    },
+    {
+        "id": "9b422515-f10f-4602-b06c-dfa89387a632",
+        "dateTime": "2025-06-24T14:39:37",
+        "locationLat": 51.58238,
+        "locationLon": 4.784451,
+        "category": "metaal",
+        "confidence": 0.71472764,
+        "temperature": 17.98
+    },
+    {
+        "id": "cc75823f-5fc1-4763-b3a9-dfc70bccd295",
+        "dateTime": "2025-06-24T14:32:10",
+        "locationLat": 51.588722,
+        "locationLon": 4.7730207,
+        "category": "papier-karton",
+        "confidence": 0.6556509,
+        "temperature": 18
+    },
+    {
+        "id": "45ebcb24-f5a8-45fc-b81f-e1854c306ef9",
+        "dateTime": "2025-06-24T14:31:23",
+        "locationLat": 51.58347,
+        "locationLon": 4.77968,
+        "category": "papier-karton",
+        "confidence": 0.6653495,
+        "temperature": 18.29
+    },
+    {
+        "id": "e02545bd-cdbd-48e8-b824-e390d79c028e",
+        "dateTime": "2025-06-24T14:42:21",
+        "locationLat": 51.586376,
+        "locationLon": 4.786452,
+        "category": "glas",
+        "confidence": 0.6543084,
+        "temperature": 18.03
+    },
+    {
+        "id": "ef158515-67bd-4ac1-ab08-e42ac84413ee",
+        "dateTime": "2025-06-24T14:29:41",
+        "locationLat": 51.586365,
+        "locationLon": 4.7915225,
+        "category": "metaal",
+        "confidence": 0.67727804,
+        "temperature": 18.42
+    },
+    {
+        "id": "5e6742e4-ca99-4411-a2df-e51cc4ed3b4d",
+        "dateTime": "2025-06-24T14:37:57",
+        "locationLat": 51.59171,
+        "locationLon": 4.7814693,
+        "category": "metaal",
+        "confidence": 0.6107753,
+        "temperature": 18.24
+    },
+    {
+        "id": "ff8e9af5-412f-461d-9f4a-e919e2a00186",
+        "dateTime": "2025-06-24T14:43:39",
+        "locationLat": 51.590412,
+        "locationLon": 4.7897882,
+        "category": "papier-karton",
+        "confidence": 0.7671528,
+        "temperature": 18.03
+    },
+    {
+        "id": "26e4beca-683e-4a6f-8afa-eb5d9141689c",
+        "dateTime": "2025-06-24T14:37:23",
+        "locationLat": 51.586052,
+        "locationLon": 4.773705,
+        "category": "glas",
+        "confidence": 0.60988986,
+        "temperature": 18.3
+    },
+    {
+        "id": "fbfc0a53-81df-421e-bc13-ee65ccf271ce",
+        "dateTime": "2025-06-24T14:38:52",
+        "locationLat": 51.592564,
+        "locationLon": 4.7722445,
+        "category": "papier-karton",
+        "confidence": 0.78849685,
+        "temperature": 17.97
+    },
+    {
+        "id": "9e87bdd5-2317-457a-9df7-ef245ff4e48d",
+        "dateTime": "2025-06-24T14:40:17",
+        "locationLat": 51.584126,
+        "locationLon": 4.784851,
+        "category": "metaal",
+        "confidence": 0.6537218,
+        "temperature": 18.31
+    },
+    {
+        "id": "bbc49bc9-c704-45f7-9b77-efb34b90b00c",
+        "dateTime": "2025-06-24T14:32:39",
+        "locationLat": 51.591953,
+        "locationLon": 4.772984,
+        "category": "metaal",
+        "confidence": 0.8310682,
+        "temperature": 18
+    },
+    {
+        "id": "c1df79d6-5a32-486e-923f-f45425d6182e",
+        "dateTime": "2025-06-24T14:36:04",
+        "locationLat": 51.593178,
+        "locationLon": 4.776111,
+        "category": "papier-karton",
+        "confidence": 0.68985873,
+        "temperature": 18.24
+    },
+    {
+        "id": "75329c03-cf4a-4335-bdca-f48045b0ac4e",
+        "dateTime": "2025-06-24T14:41:26",
+        "locationLat": 51.590153,
+        "locationLon": 4.7905664,
+        "category": "glas",
+        "confidence": 0.6303619,
+        "temperature": 17.97
+    },
+    {
+        "id": "7a1f3b4d-c52e-492e-bb4f-f637d4e9c895",
+        "dateTime": "2025-06-19T12:46:02",
+        "locationLat": 51.585297,
+        "locationLon": 4.798434,
+        "category": "papier-karton",
+        "confidence": 0.73631054,
+        "temperature": 24.06
+    },
+    {
+        "id": "b800cb24-923b-4fa3-be88-f783518954da",
+        "dateTime": "2025-06-24T14:29:15",
+        "locationLat": 51.59315,
+        "locationLon": 4.798459,
+        "category": "papier-karton",
+        "confidence": 0.6027402,
+        "temperature": 18.41
+    },
+    {
+        "id": "b79980a3-4e10-41a2-a85b-f863bc994e93",
+        "dateTime": "2025-06-19T12:51:34",
+        "locationLat": 51.58452,
+        "locationLon": 4.7901073,
+        "category": "organisch",
+        "confidence": 0.6838344,
+        "temperature": 24.18
+    },
+    {
+        "id": "c72ce575-c334-4b4b-9bd4-fb2bc9cb2477",
+        "dateTime": "2025-06-19T12:44:18",
+        "locationLat": 51.590645,
+        "locationLon": 4.784389,
+        "category": "metaal",
+        "confidence": 0.7732345,
+        "temperature": 24.09
+    },
+    {
+        "id": "b1f72544-685c-4e3e-9d37-fdd3b5ee47c1",
+        "dateTime": "2025-06-19T12:46:33",
+        "locationLat": 51.588715,
+        "locationLon": 4.771173,
+        "category": "papier-karton",
+        "confidence": 0.63199884,
+        "temperature": 24.33
+    },
+    {
+        "id": "88e9e8ee-3290-478a-ad4b-fe1b490414bc",
+        "dateTime": "2025-06-19T12:46:53",
+        "locationLat": 51.58706,
+        "locationLon": 4.790155,
+        "category": "glas",
+        "confidence": 0.70429,
+        "temperature": 24.25
+    },
+    {
+        "id": "3bb40b17-7400-4dbe-b61d-fef56bb9056d",
+        "dateTime": "2025-06-24T14:43:18",
+        "locationLat": 51.58506,
+        "locationLon": 4.787167,
+        "category": "metaal",
+        "confidence": 0.77848226,
+        "temperature": 18.03
+    }
+]

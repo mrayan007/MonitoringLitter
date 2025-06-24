@@ -38,39 +38,11 @@ html, body {
     margin: 0;
     cursor: url("Art/litterPicker.png"), auto;
     overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    /* align-items: center; */
+    text-align: center;
     font-family: 'windowsFont';
 }
 
 .grabbing {
-    cursor: url("Art/litterPicked.png"), grabbing;
-}
-
-main {
-    height: 100%;
-    max-width: calc(100% - 37.5% - 3px);
-}
-
-main h1, main h2 {
-    margin-bottom: 10px;
-}
-
-#map {
-    height: 100%;
-    width: 37.5%;
-    cursor: url("Art/litterPicker.png"), crosshair;
-    position: fixed;
-    right: 0;
-    border-radius: 0.5%;
-}
-
-.leaflet-control-attribution {
-  display: none !important;
-}
-
-.mapIcon {
     cursor: url("Art/litterPicked.png"), grabbing;
 }
 
@@ -105,6 +77,7 @@ button:hover {
     outline: solid 3px #818181;
     outline-style: inset;
     margin-left: 3px;
+    margin-right: 3px;
     padding: 10px;
     text-align: center;
 }
@@ -116,5 +89,4 @@ button:hover {
 
 #predictButton {
     margin-top: 15px;
-    margin-left: 41%;
 }

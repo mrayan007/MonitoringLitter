@@ -28,10 +28,15 @@ function openWindow(event) {
         iframe.src = "Frontend/dashboard.html";
         icon.src = "Frontend/Art/trashCan.png";
         icon.style.scale = "0.7";
-    } else {
+    } else if (label === "Litter Statistics") {
         iframe.src = "Frontend/stats.html";
         icon.src = "Frontend/Art/colaCan.png";
         // icon.style.scale = "1.3";
+    }
+    else {
+        iframe.src = "Frontend/history.html";
+        icon.src = "Frontend/Art/paper.png";
+        icon.style.scale = "0.7";
     }
 
     if (getComputedStyle(windowContainer).display === "none") {

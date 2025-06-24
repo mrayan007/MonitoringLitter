@@ -1,22 +1,9 @@
 let jwtToken = null;
 let tokenExpiry = null; 
 
-let map = null; 
-let marker = null;
-
 const CSHARP_API_BASE_URL = 'https://monitoringapi.yellowtree-67f8ca27.northeurope.azurecontainerapps.io'; 
 
 document.addEventListener('DOMContentLoaded', () => {
-    map = L.map('map', {
-        center: [51.5891072, 4.7753679],
-        zoom: 15,
-        zoomControl: false 
-    });
-
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-        attribution: '&copy; OpenStreetMap, Carto'
-    }).addTo(map);
-
     login().catch(err => console.error("Initial login on page load failed:", err.message));
 });
 
@@ -104,32 +91,15 @@ async function predict() {
 
         if (predictionType === 'location') {
             const { latitude, longitude, address } = data; 
-            predictionResultLabel.textContent = `Predicted Location: ${address} (Lat: ${latitude.toFixed(4)}, Lon: ${longitude.toFixed(4)})`;
-
-            if (marker) {
-                map.removeLayer(marker);
-            }
-            marker = L.marker([latitude, longitude]).addTo(map)
-                .bindPopup(`Predicted location for ${category} on ${dayOfWeek}:<br>${address}`)
-                .openPopup();
-            map.setView([latitude, longitude], 15); 
+            predictionResultLabel.textContent = `Most common location: ${address}`;
 
         } else if (predictionType === 'temperature') {
             const { prediction, unit } = data;
-            predictionResultLabel.textContent = `Predicted Temperature: ${prediction.toFixed(2)} ${unit}`;
-
-            if (marker) {
-                map.removeLayer(marker);
-                marker = null; 
-            }
+            predictionResultLabel.textContent = `Most common temperature: ${prediction.toFixed(2)} ${unit}`;
         }
 
     } catch (error) {
         console.error("Error during prediction:", error);
         predictionResultLabel.textContent = `Error: ${error.message}`;
-        if (marker) {
-            map.removeLayer(marker);
-            marker = null;
-        }
     }
 }
